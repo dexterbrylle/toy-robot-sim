@@ -17,8 +17,8 @@ reader.on('line', (l: string) => {
 
   const commands = l.split(' ');
   const cmd = commands[0];
-  if (cmd === 'PLACE') {
 
+  if (cmd === 'PLACE') {
     if (commands.length ===  2) {12
       const params = commands[1].split(',');
       if (params.length === 3) {
@@ -54,6 +54,7 @@ reader.on('line', (l: string) => {
       }
     }
   }
+
 });
 
 reader.on('close', () => {
