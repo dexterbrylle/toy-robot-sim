@@ -6,7 +6,7 @@ import { Bot } from './bot';
 
 const clc = require('cli-color')
 
-const reader = readline.createInterface(fs.createReadStream('instructions.txt'))
+const reader = readline.createInterface(fs.createReadStream(process.argv[2]))
 console.log(clc.bgYellow(clc.black('Running sim...')))
 const bot = new Bot();
 
