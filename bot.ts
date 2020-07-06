@@ -15,7 +15,7 @@ export class Bot {
   }
 
   place (x: number, y: number, d: string) {
-    const direction = this.directionMap(d);
+    const direction = this.directionMap(d.toLowerCase());
 
     if (x > this.tableSize().x || y > this.tableSize().y ||
       this.validDirections().indexOf(d.toLowerCase()) === -1) {
@@ -160,13 +160,13 @@ export class Bot {
         return 'n';
       }
       case 'south': {
-          return 's';
+        return 's';
       }
       case 'east': {
-          return 'e';
+        return 'e';
       }
       case 'west': {
-          return 'w';
+        return 'w';
       }
 
       default: return "Invalid direction";

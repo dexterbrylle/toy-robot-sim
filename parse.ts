@@ -19,7 +19,7 @@ reader.on('line', (l: string) => {
   const cmd = commands[0];
   if (cmd === 'PLACE') {
 
-    if (commands.length ===  2) {
+    if (commands.length ===  2) {12
       const params = commands[1].split(',');
       if (params.length === 3) {
         const x = Number(params[0]);
@@ -44,9 +44,11 @@ reader.on('line', (l: string) => {
         }
         case 'LEFT': {
           bot.left();
+          break;
         }
         case 'RIGHT': {
           bot.right();
+          break;
         }
         default: break;
       }
